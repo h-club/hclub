@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TravelGem</title>
+	<%= stylesheet_link_tag	"application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+<div class="thumbnail">
+	<h1>TravelGem</h1>
+	<p><h4>:For your easy travelling</h4></p>
+</div>
+<hr>
+<div class="container">
+	<form action="/travelgem/index" method="post">
+		 <a href="#" class="dropdown-toggle">Country<b class="caret"></b></a>		 
+			<select name="country_category">
+			<option value="Europe">Europe</option>
+			<option value="SouthAmerica">SouthAmerica</option>
+			<option value="Asia">Asia</option>
+		</select>
+	</form>
+</div>
+<br>
+<div class="container">
+  <form action="/travelgem/index" method="post">
+     <a href="#" class="dropdown-toggle">City<b class="caret"></b></a>   
+      <select name="country_category">
+      <option value="Europe">Europe</option>
+      <option value="SouthAmerica">SouthAmerica</option>
+      <option value="Asia">Asia</option>
+    </select>
+  </form>
+</div>
+
+		
+		<div class="container">
+			<%= yield %>
+		</div>
+</body>
